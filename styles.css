@@ -826,9 +826,6 @@ h1 {
     color: #ef4b3f;
 }
 
-
-
-
 footer {
     background-color: #333;
     color: #fff;
@@ -1195,6 +1192,7 @@ footer {
 }
 
 @media (max-width: 480px) {
+    
     .top-bar {
         padding: 10px 10px;
     }
@@ -1315,3 +1313,5 @@ footer {
     }
    
 }
+
+
