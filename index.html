@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pièces Auto - Qualité et Fiabilité</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <div class="top-bar">
+        <span><ion-icon name="call-outline"></ion-icon>+237 694-52-65-05</span>
+        <ul>
+            <li><a href=""><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href=""><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li><a href=""><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        </ul>
+    </div>
+    <nav>
+        <div class="logo">
+            <img src="img/logo.png" alt="">
+        </div>
+        <div class="toggle">
+            <a href="#"><ion-icon name="menu-outline"></ion-icon></a>
+        </div>
+        <ul class="menu">
+            <li><a href="#">Acceuil</a></li>
+            <li><a href="#">A propos</a></li>
+            <li><a href="#">Nos Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <h2>Accessoires Auto pour une Conduite Optimale</h2>
+        <p>Explorez notre gamme d'accessoires automobiles de haute qualité pour améliorer la performance et le confort
+            de votre véhicule. Trouvez des pièces fiables et bénéficiez d'un service client dédié pour une conduite
+            optimale.</p>
+        <div class="btn">
+            <a href="about.html" class="blue">A Propos de nous</a>
+            <a href="contact.html" class="yellow">Contactez-nous</a>
+        </div>
+    </section>
+    <section id="about">
+        <div class="about-header">
+            <h1>À Propos de Nous</h1>
+            <p>Découvrez qui nous sommes, ce que nous faisons et pourquoi nous le faisons. Nous sommes passionnés par
+                notre mission et nous nous engageons à vous offrir le meilleur.</p>
+        </div>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="img/background.jpg" alt="About Us">
+                <div class="text-overlay">
+                    <p>Texte Attrayant</p>
+                </div>
+            </div>
+            <div class="about-text">
+                <h2>Notre Histoire</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel placerat sapien. Curabitur a
+                    pharetra felis. Sed bibendum libero et quam feugiat, sed ullamcorper lacus dictum.</p>
+                <button onclick="scrollToSection('contact')">Contact Us</button>
+            </div>
+        </div>
+    </section>
+    <section class="cat">
+        <div class="cat-container">
+            <div class="about-header">
+                <h1>Nos Catalogues</h1>
+                <p>Découvrez qui nous sommes, ce que nous faisons et pourquoi nous le faisons. Nous sommes passionnés par
+                    notre mission et nous nous engageons à vous offrir le meilleur.</p>
+            </div>
+            <div class="filters">
+                <label>Filter by Category:</label>
+                <button class="filter-btn" data-category="all">All</button>
+                <button class="filter-btn" data-category="engine">Engine Parts</button>
+                <button class="filter-btn" data-category="brakes">Brake Parts</button>
+                <button class="filter-btn" data-category="electrical">Electrical Parts</button>
+                <button class="filter-btn" data-category="suspension">Suspension Parts</button>
+                <!-- Add more buttons as needed -->
+            </div>
+    
+            <div class="categories">
+                <!-- Engine Parts -->
+                <div class="category" data-category="engine">
+                    <img src="img/cat1.jpg" alt="Engine Parts">
+                    <h3>Engine Parts</h3>
+                    <p>Explore a wide range of engine components to enhance your vehicle's performance.</p>
+                    <a href="#" class="contact"><i class="fas fa-phone-alt"></i> Contact Us</a>
+                </div>
+                <div class="category" data-category="brakes">
+                    <img src="img/cat1.jpg" alt="Brake Parts">
+                    <h3>Brake Parts</h3>
+                    <p>Find high-quality brake pads, rotors, and calipers for safety and reliability.</p>
+                    <a href="#" class="contact"><i class="fas fa-phone-alt"></i> Contact Us</a>
+                </div>
+                <div class="category" data-category="electrical">
+                    <img src="img/cat1.jpg" alt="Electrical Parts">
+                    <h3>Electrical Parts</h3>
+                    <p>Discover essential electrical components like batteries and wiring harnesses.</p>
+                    <a href="#" class="contact"><i class="fas fa-phone-alt"></i> Contact Us</a>
+                </div>
+                <div class="category" data-category="suspension">
+                    <img src="img/cat1.jpg" alt="Suspension Parts">
+                    <h3>Suspension Parts</h3>
+                    <p>Enhance your vehicle's comfort and handling with advanced suspension systems.</p>
+                    <a href="#" class="contact"><i class="fas fa-phone-alt"></i> Contact Us</a>
+                </div>
+            </div>
+    
+            <div class="showcase" id="showcase">
+                <!-- Dynamically populated with JavaScript -->
+            </div>
+        </div>
+    </section>
+    <section class="deal-zone">
+        <div class="about-header">
+            <h1>Nos Catalogues</h1>
+            <p>Découvrez qui nous sommes, ce que nous faisons et pourquoi nous le faisons. Nous sommes passionnés par
+                notre mission et nous nous engageons à vous offrir le meilleur.</p>
+        </div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <div class="deal-card">
+                        <div class="deal-banner new">New</div>
+                        <img src="img/cat1.jpg" alt="New Product" class="deal-image">
+                        <h2 class="deal-title">New Arrival: XYZ Product</h2>
+                        <p class="deal-description">Be the first to get our latest product, offering innovative features and top-notch quality.</p>
+                        <a href="#" class="deal-button">Shop Now</a>
+                        <div class="deal-stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <div class="deal-card">
+                        <div class="deal-banner sale">Sale</div>
+                        <img src="img/cat1.jpg" alt="Sale Product" class="deal-image">
+                        <h2 class="deal-title">Big Sale on ABC Product</h2>
+                        <p class="deal-description">Enjoy amazing discounts on our best-selling products. Limited time offer!</p>
+                        <a href="#" class="deal-button">Grab the Deal</a>
+                        <div class="deal-stars">⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <div class="deal-card">
+                        <div class="deal-banner hot">Hot</div>
+                        <img src="img/cat1.jpg" alt="Hot Product" class="deal-image">
+                        <h2 class="deal-title">Hot Pick: DEF Product</h2>
+                        <p class="deal-description">This product is flying off the shelves! Get yours while stocks last.</p>
+                        <a href="#" class="deal-button">Buy Now</a>
+                        <div class="deal-stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="deal-card">
+                        <div class="deal-banner new">New</div>
+                        <img src="img/cat1.jpg" alt="New Product" class="deal-image">
+                        <h2 class="deal-title">New Arrival: XYZ Product</h2>
+                        <p class="deal-description">Be the first to get our latest product, offering innovative features and top-notch quality.</p>
+                        <a href="#" class="deal-button">Shop Now</a>
+                        <div class="deal-stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <div class="deal-card">
+                        <div class="deal-banner sale">Sale</div>
+                        <img src="img/cat1.jpg" alt="Sale Product" class="deal-image">
+                        <h2 class="deal-title">Big Sale on ABC Product</h2>
+                        <p class="deal-description">Enjoy amazing discounts on our best-selling products. Limited time offer!</p>
+                        <a href="#" class="deal-button">Grab the Deal</a>
+                        <div class="deal-stars">⭐⭐⭐⭐</div>
+                    </div>
+                </div>
+                <!-- Add more slides as needed -->
+            </div>
+         
+        </div>
+    </section>
+    <section class="subscriber-section">
+        <div class="container">
+            <h2>Stay Updated!</h2>
+            <p>Subscribe to our newsletter for the latest updates on auto parts and special offers.</p>
+            <form id="subscriptionForm">
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <p id="message"></p>
+        </div>
+    </section>
+    <section class="products-overview">
+        <div class="container">
+            <div class="about-header">
+                <h1>Our Product</h1>
+                <p>Découvrez qui nous sommes, ce que nous faisons et pourquoi nous le faisons. Nous sommes passionnés par
+                    notre mission et nous nous engageons à vous offrir le meilleur.</p>
+            </div>
+            <div class="tabs">
+                <button class="tab-button active" data-tab="recent">Recent Products</button>
+                <button class="tab-button" data-tab="featured">Featured Products</button>
+                <button class="tab-button" data-tab="bestsellers">Best Sellers</button>
+            </div>
+            <div class="tabs-content">
+                <div id="recent" class="tab-content active">
+                    <div class="products-grid">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="img/best1.jpg" alt="Part A">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-description">Lorem ipsum dolor sit amet </div>
+                                <div class="product-rating">★★★★☆</div>
+                                <button class="buy-button">Buy Now</button>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="img/recent1.jpg" alt="Part B">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-description">Lorem ipsum dolor sit amet </div>
+                                <div class="product-rating">★★★☆☆</div>
+                                <button class="buy-button">Buy Now</button>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="img/featured1.jpg" alt="Part A">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-description">Lorem ipsum dolor sit amet </div>
+                                <div class="product-rating">★★★★☆</div>
+                                <button class="buy-button">Buy Now</button>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="img/best1.jpg" alt="Part B">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-description">Lorem ipsum dolor sit amet </div>
+                                <div class="product-rating">★★★☆☆</div>
+                                <button class="buy-button">Buy Now</button>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="img/best1.jpg" alt="Part A">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-description">Lorem ipsum dolor sit amet.</div>
+                                <div class="product-rating">★★★★☆</div>
+                                <button class="buy-button">Buy Now</button>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="img/recent1.jpg" alt="Part B">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-description">Lorem ipsum dolor sit amet </div>
+                                <div class="product-rating">★★★☆☆</div>
+                                <button class="buy-button">Buy Now</button>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="img/featured1.jpg" alt="Part A">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-description">Lorem ipsum dolor sit amet </div>
+                                <div class="product-rating">★★★★☆</div>
+                                <button class="buy-button">Buy Now</button>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="img/best1.jpg" alt="Part B">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-description">Lorem ipsum dolor sit amet </div>
+                                <div class="product-rating">★★★☆☆</div>
+                                <button class="buy-button">Buy Now</button>
+                            </div>
+                        </div>
+                        <!-- Add more recent products here -->
+                    </div>
+                </div>
+                <div id="featured" class="tab-content">
+                    <div class="products-grid">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="path/to/image3.jpg" alt="Part C">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-title">Part C</div>
+                                <div class="product-description">Description of Part C</div>
+                                <div class="product-rating">★★★★☆</div>
+                                <button class="buy-button">Buy Now</button>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="path/to/image4.jpg" alt="Part D">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-title">Part D</div>
+                                <div class="product-description">Description of Part D</div>
+                                <div class="product-rating">★★★☆☆</div>
+                                <button class="buy-button">Buy Now</button>
+                            </div>
+                        </div>
+                        <!-- Add more featured products here -->
+                    </div>
+                </div>
+                <div id="bestsellers" class="tab-content">
+                    <div class="products-grid">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="path/to/image5.jpg" alt="Part E">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-title">Part E</div>
+                                <div class="product-description">Description of Part E</div>
+                                <div class="product-rating">★★★★★</div>
+                                <button class="buy-button">Buy Now</button>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="path/to/image6.jpg" alt="Part F">
+                            </div>
+                            <div class="product-info">
+                                <div class="product-title">Part F</div>
+                                <div class="product-description">Description of Part F</div>
+                                <div class="product-rating">★★★☆☆</div>
+                                <button class="buy-button">Buy Now</button>
+                            </div>
+                        </div>
+                        <!-- Add more best seller products here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="testimonial-carousel">
+        <div class="container">
+            <div class="about-header">
+                <h1>Our Product</h1>
+                <p>Découvrez qui nous sommes, ce que nous faisons et pourquoi nous le faisons. Nous sommes passionnés par
+                    notre mission et nous nous engageons à vous offrir le meilleur.</p>
+            </div>
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <!-- Testimonial items -->
+                    <div class="carousel-item">
+                        <div class="testimonial">
+                            <p>"This company offers the best service I've ever experienced. Highly recommend!"</p>
+                            <div class="author">
+                                <img src="img/client1.jpeg" alt="Customer 1">
+                                <div class="author-info">
+                                    <strong>John Doe</strong>
+                                    <span>CEO, Company A</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial">
+                            <p>"Fantastic quality and customer service. Will definitely return for more!"</p>
+                            <div class="author">
+                                <img src="img/client1.jpeg" alt="Customer 2">
+                                <div class="author-info">
+                                    <strong>Jane Smith</strong>
+                                    <span>Marketing Director, Company B</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial">
+                            <p>"This company offers the best service I've ever experienced. Highly recommend!"</p>
+                            <div class="author">
+                                <img src="img/client1.jpeg" alt="Customer 1">
+                                <div class="author-info">
+                                    <strong>John Doe</strong>
+                                    <span>CEO, Company A</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial">
+                            <p>"Fantastic quality and customer service. Will definitely return for more!"</p>
+                            <div class="author">
+                                <img src="img/client1.jpeg" alt="Customer 2">
+                                <div class="author-info">
+                                    <strong>Jane Smith</strong>
+                                    <span>Marketing Director, Company B</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial">
+                            <p>"This company offers the best service I've ever experienced. Highly recommend!"</p>
+                            <div class="author">
+                                <img src="img/client1.jpeg" alt="Customer 1">
+                                <div class="author-info">
+                                    <strong>John Doe</strong>
+                                    <span>CEO, Company A</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial">
+                            <p>"Fantastic quality and customer service. Will definitely return for more!"</p>
+                            <div class="author">
+                                <img src="img/client1.jpeg" alt="Customer 2">
+                                <div class="author-info">
+                                    <strong>Jane Smith</strong>
+                                    <span>Marketing Director, Company B</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial">
+                            <p>"This company offers the best service I've ever experienced. Highly recommend!"</p>
+                            <div class="author">
+                                <img src="img/client1.jpeg" alt="Customer 1">
+                                <div class="author-info">
+                                    <strong>John Doe</strong>
+                                    <span>CEO, Company A</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial">
+                            <p>"Fantastic quality and customer service. Will definitely return for more!"</p>
+                            <div class="author">
+                                <img src="img/client1.jpeg" alt="Customer 2">
+                                <div class="author-info">
+                                    <strong>Jane Smith</strong>
+                                    <span>Marketing Director, Company B</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more carousel items here -->
+                </div>
+                <button class="carousel-control prev" aria-label="Previous">&#10094;</button>
+                <button class="carousel-control next" aria-label="Next">&#10095;</button>
+            </div>
+        </div>
+    </section>
+    <section id="partners">
+        <div class="about-header">
+            <h1>Our Product</h1>
+            <p>Découvrez qui nous sommes, ce que nous faisons et pourquoi nous le faisons. Nous sommes passionnés par
+                notre mission et nous nous engageons à vous offrir le meilleur.</p>
+        </div>
+        <div id="partners-list" class="partners-list">
+            <!-- Example logos; add more as needed -->
+             
+            <div class="partner-logo">
+                <img src="img/mercedes1.png" alt="Partner 5">
+            </div>
+            <div class="partner-logo">
+                <img src="img/howo.png" alt="Partner 1">
+            </div>
+            <div class="partner-logo">
+                <img src="img/jac.png" alt="Partner 2">
+            </div>
+            <div class="partner-logo">
+                <img src="img/saf.png" alt="Partner 3">
+            </div>
+            <div class="partner-logo">
+                <img src="img/shacman.png" alt="Partner 4">
+            </div>
+            <div class="partner-logo">
+                <img src="img/BPW.png" alt="Partner 6">
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="contact-container">
+            <h1>Contact Us</h1>
+            <p>Découvrez qui nous sommes, ce que nous faisons et pourquoi nous le faisons. Nous sommes passionnés par notre mission et nous nous engageons à vous offrir le meilleur.</p>
+            
+            <!-- Single Button linking to another page -->
+            <a href="contact-form.html" class="btn">Go to Contact Form</a>
+            
+            <!-- Social Media Icons -->
+            <div class="social-media">
+                <a href="https://facebook.com" class="social-icon" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com" class="social-icon" target="_blank" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://instagram.com" class="social-icon" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://linkedin.com" class="social-icon" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col footer-col-1">
+                <div class="footer-logo-section">
+                    <img src="img/logo.png" alt="Logo" class="footer-logo">
+                    <div class="footer-description">Votre expert en pièces détachées automobiles. </div>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-col footer-col-2">
+                <h3>Coordonnées</h3>
+                <ul>
+                    <li>Adresse : 123 Rue Exemple</li>
+                    <li>Téléphone : (123) 456-7890</li>
+                    <li>Email : contact@example.com</li>
+                </ul>
+            </div>
+            <div class="footer-col footer-col-3">
+                <h3>Liens Rapides</h3>
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">À propos</a></li>
+                    <li><a href="#">Nos Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col footer-col-4">
+                <h3>Newsletter</h3>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Votre email">
+                    <button>Inscription</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Costan website | Design par <a href="#">Yvanie Noelle</a></p>
+        </div>
+    </footer>
+    <button id="scroll-top"><i class="fas fa-chevron-up"></i></button>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>>
+    <script src="script.js" defer></script>
+</body>
+
+</html>
