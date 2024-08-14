@@ -101,13 +101,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextButton = document.querySelector('.carousel-control.next');
     const carouselInner = document.querySelector('.carousel-inner');
     const items = document.querySelectorAll('.carousel-item');
-    const itemsToShow = 4; // Number of items to show at once
+    let itemsToShow = 4; // Default number of items to show
+
+    function updateItemsToShow() {
+        if (window.innerWidth <= 576) {
+            itemsToShow = 1;
+        } else if (window.innerWidth <= 768) {
+            itemsToShow = 2;
+        } else if (window.innerWidth <= 992) {
+            itemsToShow = 3;
+        } else {
+            itemsToShow = 4;
+        }
+    }
+
+    updateItemsToShow(); // Initial call
+
+    window.addEventListener('resize', () => {
+        updateItemsToShow();
+        updateCarousel(); // Adjust carousel position on resize
+    });
+
     const itemWidth = 100 / itemsToShow; // Percentage width of each item
     const totalItems = items.length;
-    const maxIndex = totalItems; // Maximum index for the original carousel items
     let currentIndex = 0;
 
-    // Duplicate items and append to the end
+    // Duplicate items for infinite scroll
     const itemsClone = Array.from(items).map(item => item.cloneNode(true));
     itemsClone.forEach(item => carouselInner.appendChild(item));
 
@@ -116,41 +135,31 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function showNext() {
-        if (currentIndex >= maxIndex) {
-            // Reset to the start without showing the jump
+        if (currentIndex >= totalItems) {
             carouselInner.style.transition = 'none';
             carouselInner.style.transform = `translateX(0%)`;
             currentIndex = 0;
-
-            // Force a reflow to reset the transition
             carouselInner.offsetHeight; // Trigger a reflow
             carouselInner.style.transition = 'transform 0.5s ease-in-out';
         }
-
-        if (currentIndex < maxIndex + itemsToShow) {
-            currentIndex++;
-        } else {
-            currentIndex = 0; // Loop back to the start
+        currentIndex++;
+        if (currentIndex >= totalItems + itemsToShow - 1) {
+            currentIndex = 0;
         }
         updateCarousel();
     }
 
     function showPrev() {
         if (currentIndex <= 0) {
-            // Reset to the end without showing the jump
             carouselInner.style.transition = 'none';
-            carouselInner.style.transform = `translateX(-${maxIndex * itemWidth}%)`;
-            currentIndex = maxIndex;
-
-            // Force a reflow to reset the transition
+            carouselInner.style.transform = `translateX(-${(totalItems - itemsToShow) * itemWidth}%)`;
+            currentIndex = totalItems;
             carouselInner.offsetHeight; // Trigger a reflow
             carouselInner.style.transition = 'transform 0.5s ease-in-out';
         }
-
-        if (currentIndex > 0) {
-            currentIndex--;
-        } else {
-            currentIndex = maxIndex + itemsToShow - 1; // Loop back to the end
+        currentIndex--;
+        if (currentIndex < 0) {
+            currentIndex = totalItems - itemsToShow;
         }
         updateCarousel();
     }
@@ -158,10 +167,8 @@ document.addEventListener('DOMContentLoaded', () => {
     nextButton.addEventListener('click', showNext);
     prevButton.addEventListener('click', showPrev);
 
-    // Optional: Automatic sliding every 5 seconds
     setInterval(showNext, 5000);
 });
-
 document.addEventListener('DOMContentLoaded', function() {
     const scrollTopButton = document.getElementById('scroll-top');
 
