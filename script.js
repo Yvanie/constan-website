@@ -59,41 +59,40 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 
-  document.addEventListener('DOMContentLoaded', () => {
-    const swiper = new Swiper('.swiper-container', {
-        slidesPerView: 4, // Show 4 slides per view
-        spaceBetween: 20, // Space between slides
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+  const swiper = new Swiper('.swiper-container', {
+    slidesPerView: 4, // Number of slides to show at once
+    spaceBetween: 20, // Space between slides
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    loop: true, // Enable infinite loop mode
+    autoplay: {
+        delay: 3000, // Delay between slides (in milliseconds)
+        disableOnInteraction: false, // Continue autoplay after user interactions
+    },
+    speed: 600, // Transition speed (in milliseconds)
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
         },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
+        640: {
+            slidesPerView: 2,
         },
-        loop: true,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
+        768: {
+            slidesPerView: 3,
         },
-        breakpoints: {
-            320: {
-                slidesPerView: 1,
-            },
-            640: {
-                slidesPerView: 2,
-            },
-            768: {
-                slidesPerView: 3,
-            },
-            1024: {
-                slidesPerView: 4,
-            },
-            1440: {
-                slidesPerView: 5, // Display 5 slides per view on larger screens
-            },
+        1024: {
+            slidesPerView: 4,
         },
-    });
+        1440: {
+            slidesPerView: 5, // Display 5 slides per view on larger screens
+        },
+    },
 });
 
 document.addEventListener('DOMContentLoaded', () => {

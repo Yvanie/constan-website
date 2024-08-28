@@ -41,6 +41,7 @@ nav{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adding box shadow */
     position: sticky;
     top: 0;
+    z-index: 10000000;
 }
 nav a{
     color: #222;
@@ -178,7 +179,16 @@ nav ul li a:hover{
     gap: 20px;
     flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
-
+.about-text a.blue{
+    padding: 10px;
+    color: #fff;
+    background: #ff6f61;
+    transition: 0.3s ease;
+}
+.about-text a.blue:hover{
+    color: #fff;
+    background: #ef4b3f;
+}
 .about-image {
     position: relative;
     flex: 1;
@@ -342,10 +352,7 @@ button:hover {
   /* deal page */
   .deal-zone {
     background: #fff;
-    padding: 20px;
-    text-align: center;
-    max-width: 1000px; /* Set to your desired max-width */
-    margin: 0 auto; /* Center the section */
+    padding: 50px 20px;
 }
 
 .section-title {
@@ -355,19 +362,22 @@ button:hover {
 }
 
 .swiper-container {
-    width: 100%;
-    height: auto;
-    overflow: hidden; /* Ensure no overflow */
+   max-width: 1200px;
+    margin: 0 auto;
+    padding:50px 20px;
+    overflow: hidden; 
+    overflow: hidden; /* Prevent overflow of slides */
+    padding: 0;
 }
 
-.swiper-wrapper {
-    display: flex; /* Flex container for swiper slides */
-}
+/* .swiper-wrapper {
+    display: flex; 
+}  */
 
 .swiper-slide {
-    display: flex;
-    justify-content: center;
-    flex: 1 0 auto; /* Allow slides to grow and shrink */
+ 
+    width: auto; /* Ensure the width adapts to its content */
+    flex: 1 0 auto; /* Ensure slides grow and shrink appropriately */
 }
 
 .deal-card {
@@ -376,8 +386,10 @@ button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     width: 100%;
+    gap: 10;
     max-width: 250px; /* Max-width of each card */
     text-align: center;
+    max-width: 100%;
     position: relative;
     margin: 0 auto; /* Center the card within the slide */
 }
@@ -506,7 +518,7 @@ button:hover {
 }
 
 .products-overview .container {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -637,11 +649,11 @@ h1 {
 
 .testimonial-carousel {
     background-color: #f4f4f4;
-    padding: 40px 20px;
+    padding: 50px 20px;
 }
 
 .testimonial-carousel .container {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -755,7 +767,6 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .partner-logo img {
@@ -766,17 +777,10 @@ h1 {
 
 
 #contact {
-    padding: 40px;
-    background-color: #f4f4f4;
+    background: #f4f4f4;
+    padding: 50px 20px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for the whole section */
-    border-radius: 8px; /* Optional: Rounded corners */
-    margin: 0 auto; /* Centering the section */
-   
-    max-width: 1200px; /* Optional: Set a maximum width for better responsiveness */
-    box-sizing: border-box; /* Ensures padding and border are included in the element’s total width and height */
 }
-
 .contact-container {
     max-width: 100%; /* Ensure it uses full width inside the #contact section */
     margin: 0 auto;
@@ -790,8 +794,11 @@ h1 {
 }
 
 .contact-container p {
-    margin-bottom: 20px;
-    font-size: 1.2em;
+    font-size: 1em;
+    color: #666;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 10px;
 }
 
 .contact-container .btn {
@@ -1650,7 +1657,7 @@ header {
 /* Filter Styles */
 .filter {
     padding: 2rem 1rem;
-    background-color: #f9f9f9;
+    background-color: transparent;
     text-align: center;
 }
 
@@ -1664,9 +1671,9 @@ header {
 }
 
 .filter-btn {
-    background-color: #007bff;
-    color: white;
-    border: none;
+    background-color: transparent;
+    color: #222;
+    border: 1px solid #ff3d2e;
     padding: 0.5rem 1rem;
     border-radius: 4px;
     cursor: pointer;
@@ -1674,11 +1681,11 @@ header {
 }
 
 .filter-btn:hover {
-    background-color: #0056b3;
+    background-color: #ff3d2e;
 }
 
 .filter-btn.active {
-    background-color: #0056b3;
+    background-color: #ff3d2e;
     transform: scale(1.05);
 }
 
@@ -1723,11 +1730,11 @@ header {
 .article-content p {
     margin: 0;
     color: #666;
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
 }
 
 .contact-btn {
-    background-color: #25D366; /* WhatsApp green */
+    background-color: #ff3d2e; /* WhatsApp green */
     color: white;
     border: none;
     padding: 0.5rem 1rem;
@@ -1741,7 +1748,7 @@ header {
 }
 
 .contact-btn:hover {
-    background-color: #1EBE4F;
+    background-color: #ff3d2e;
     transform: scale(1.05) translateX(-50%);
 }
 
@@ -1752,7 +1759,7 @@ header {
 }
 
 .pagination-btn {
-    background-color: #007bff;
+    background-color: #ff3d2e;
     color: white;
     border: none;
     padding: 0.5rem 1rem;
@@ -1762,7 +1769,7 @@ header {
 }
 
 .pagination-btn:hover {
-    background-color: #0056b3;
+    background-color: #ff3d2e;
 }
 
 /* Responsive Design */
@@ -1770,6 +1777,9 @@ header {
     .article-item {
         max-width: calc(33.333% - 1rem); /* Adjust to fit 3 items per row */
         width: calc(33.333% - 1rem); /* Adjust for spacing */
+    }
+    .article-content p {
+        padding-bottom: 3rem; /* Reduced padding */
     }
 }
 
@@ -1803,7 +1813,7 @@ header {
     }
 
     .article-content p {
-        padding-bottom: 1rem; /* Reduced padding */
+        padding-bottom: 3rem; /* Reduced padding */
     }
 }
 
