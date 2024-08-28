@@ -45,7 +45,9 @@ nav{
 nav a{
     color: #222;
 }
-nav a:hover{
+
+nav ul li a.active,
+nav ul li a:hover{
     color: #ef4b3f;
 }
 .logo{
@@ -1315,3 +1317,165 @@ footer {
 }
 
 
+/*contact page */
+header {
+    background-image: url('img/background1.jpg'); /* Replace with your background image URL */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 5rem 0;
+}
+
+.header-content h1 {
+    margin: 0;
+    font-size: 3rem;
+}
+
+main {
+    padding: 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-header {
+    margin-bottom: 2rem;
+}
+
+.about-header h1 {
+    margin-top: 0;
+}
+
+.contact-info .info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.contact-info .info-item {
+    flex: 1;
+    min-width: 250px;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info .info-item i {
+    font-size: 2rem;
+    color: #F44336;
+    margin-right: 0.5rem;
+}
+.contact-info .info-item .social-media i {
+    font-size: 2rem;
+    color: #222;
+    margin-right: 0.5rem;
+}
+.contact-info  .info-item h3 {
+    margin-top: 0;
+}
+
+.contact-info .info-item p {
+    margin: 0.5rem 0;
+}
+
+.contact-info .social-media {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-info .social-media li {
+    margin-bottom: 0.5rem;
+}
+
+.contact-info .social-media a {
+    text-decoration: none;
+    color: #222;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info .social-media a i {
+    margin-right: 0.5rem;
+}
+
+.contact-info .social-media a:hover {
+    text-decoration: underline;
+}
+
+.map {
+    margin-top: 2rem;
+}
+
+.map h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.map iframe {
+    border: 0;
+    border-radius: 8px;
+}
+/* Responsive part*/
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-header h1 {
+        font-size: 2rem;
+    }
+
+    .about-header p {
+        font-size: 1rem;
+    }
+
+    .info {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .info-item {
+        min-width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .map iframe {
+        height: 300px;
+    }
+}
+
+/* For smaller smartphones (max-width: 480px) */
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 2rem;
+    }
+
+    .about-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .about-header p {
+        font-size: 0.9rem;
+    }
+
+    .info-item {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .map iframe {
+        height: 250px;
+    }
+}
