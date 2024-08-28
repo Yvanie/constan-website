@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pièces Auto - Qualité et Fiabilité</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <div class="top-bar">
+        <span><ion-icon name="call-outline"></ion-icon>+237 694-52-65-05</span>
+        <ul>
+            <li><a href=""><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href=""><ion-icon name="logo-twitter"></ion-icon></a></li>
+            <li><a href=""><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        </ul>
+    </div>
+    <nav>
+        <div class="logo">
+            <img src="img/logo.png" alt="">
+        </div>
+        <div class="toggle">
+            <a href="#"><ion-icon name="menu-outline"></ion-icon></a>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html">Acceuil</a></li>
+            <li><a href="about.html" >A propos</a></li>
+            <li><a href="article.html" class="active">Nos Articles</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="header-content">
+            <h1>Automobile Parts Catalog</h1>
+            <p>Explore our wide range of automobile parts and accessories.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="filter">
+            <div class="container">
+                <h2>Filter by Category</h2>
+                <ul class="filter-list">
+                    <li><button class="filter-btn active" data-category="all">All</button></li>
+                    <li><button class="filter-btn" data-category="engine">Engine Parts</button></li>
+                    <li><button class="filter-btn" data-category="brakes">Brakes</button></li>
+                    <li><button class="filter-btn" data-category="suspension">Suspension</button></li>
+                    <li><button class="filter-btn" data-category="electrical">Electrical</button></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="articles">
+            <div class="container">
+                <div class="article-list">
+                    <!-- Sample Articles -->
+                    <div class="article-item" data-category="engine">
+                        <img src="img/cat1.jpg" alt="Engine Oil">
+                        <div class="article-content">
+                            <h3>Engine Oil</h3>
+                            <p>High-quality engine oil for all vehicles. Ensures smooth engine performance and longevity.</p>
+                            <button class="contact-btn" data-article="Engine Oil" data-image="img/cat1.jpg">Contact Us</button>
+                        </div>
+                    </div>
+                    <div class="article-item" data-category="brakes">
+                        <img src="img/cat1.jpg" alt="Brake Pads">
+                        <div class="article-content">
+                            <h3>Brake Pads</h3>
+                            <p>Durable brake pads for better braking performance and safety. Ideal for all types of vehicles.</p>
+                            <button class="contact-btn" data-article="Brake Pads" data-image="img/cat1.jpg">Contact Us</button>
+                        </div>
+                    </div>
+                    <div class="article-item" data-category="suspension">
+                        <img src="img/cat1.jpg" alt="Suspension Strut">
+                        <div class="article-content">
+                            <h3>Suspension Strut</h3>
+                            <p>Reliable suspension struts to improve handling and ride comfort. Compatible with various models.</p>
+                            <button class="contact-btn" data-article="Suspension Strut" data-image="img/cat1.jpg">Contact Us</button>
+                        </div>
+                    </div>
+                    <div class="article-item" data-category="electrical">
+                        <img src="img/cat1.jpg" alt="Car Battery">
+                        <div class="article-content">
+                            <h3>Car Battery</h3>
+                            <p>High-performance car batteries for reliable starting power and longer lifespan.</p>
+                            <button class="contact-btn" data-article="Car Battery" data-image="img/cat1.jpg">Contact Us</button>
+                        </div>
+                    </div>
+                    <div class="article-item" data-category="engine">
+                        <img src="img/cat1.jpg" alt="Air Filter">
+                        <div class="article-content">
+                            <h3>Air Filter</h3>
+                            <p>Efficient air filters that ensure clean air intake for optimal engine performance.</p>
+                            <button class="contact-btn" data-article="Air Filter" data-image="img/cat1.jpg">Contact Us</button>
+                        </div>
+                    </div>
+                    <div class="article-item" data-category="brakes">
+                        <img src="img/cat1.jpg" alt="Brake Disc">
+                        <div class="article-content">
+                            <h3>Brake Disc</h3>
+                            <p>High-quality brake discs for improved stopping power and safety. Suitable for various vehicles.</p>
+                            <button class="contact-btn" data-article="Brake Disc" data-image="img/cat1.jpg">Contact Us</button>
+                        </div>
+                    </div>
+                    <div class="article-item" data-category="suspension">
+                        <img src="img/cat1.jpg" alt="Shock Absorber">
+                        <div class="article-content">
+                            <h3>Shock Absorber</h3>
+                            <p>Durable shock absorbers for enhanced driving comfort and stability on all road conditions.</p>
+                            <button class="contact-btn" data-article="Shock Absorber" data-image="img/cat1.jpg">Contact Us</button>
+                        </div>
+                    </div>
+                    <div class="article-item" data-category="electrical">
+                        <img src="img/cat1.jpg" alt="Car Fuse">
+                        <div class="article-content">
+                            <h3>Car Fuse</h3>
+                            <p>Reliable car fuses to protect your vehicle's electrical system from overloads and short circuits.</p>
+                            <button class="contact-btn" data-article="Car Fuse" data-image="img/cat1.jpg">Contact Us</button>
+                        </div>
+                    </div>
+                    <div class="article-item" data-category="engine">
+                        <img src="img/cat1.jpg" alt="Fuel Pump">
+                        <div class="article-content">
+                            <h3>Fuel Pump</h3>
+                            <p>Efficient fuel pumps for reliable fuel delivery and engine performance.</p>
+                            <button class="contact-btn" data-article="Fuel Pump" data-image="img/cat1.jpg">Contact Us</button>
+                        </div>
+                    </div>
+                     <!-- Sample Articles -->
+                     <div class="article-item" data-category="engine">
+                        <img src="img/cat1.jpg" alt="Engine Oil">
+                        <div class="article-content">
+                            <h3>Engine Oil</h3>
+                            <p>High-quality engine oil for all vehicles. Ensures smooth engine performance and longevity.</p>
+                            <button class="contact-btn" data-article="Engine Oil" data-image="img/cat1.jpg">Contact Us</button>
+                        </div>
+                    </div>
+                    <div class="article-item" data-category="brakes">
+                        <img src="img/cat1.jpgg" alt="Brake Pads">
+                        <div class="article-content">
+                            <h3>Brake Pads</h3>
+                            <p>Durable brake pads for better braking performance and safety. Ideal for all types of vehicles.</p>
+                            <button class="contact-btn" data-article="Brake Pads" data-image="img/cat1.jpg">Contact Us</button>
+                        </div>
+                    </div>
+                    <div class="article-item" data-category="suspension">
+                        <img src="img/cat1.jpg" alt="Suspension Strut">
+                        <div class="article-content">
+                            <h3>Suspension Strut</h3>
+                            <p>Reliable suspension struts to improve handling and ride comfort. Compatible with various models.</p>
+                            <button class="contact-btn" data-article="Suspension Strut" data-image="img/cat1.jpg">Contact Us</button>
+                        </div>
+                    </div>
+                    <div class="article-item" data-category="electrical">
+                        <img src="img/cat1.jpg" alt="Car Battery">
+                        <div class="article-content">
+                            <h3>Car Battery</h3>
+                            <p>High-performance car batteries for reliable starting power and longer lifespan.</p>
+                            <button class="contact-btn" data-article="Car Battery" data-image="img/cat1.jpg">Contact Us</button>
+                        </div>
+                    </div>
+                    <div class="article-item" data-category="engine">
+                        <img src="img/cat1.jpg" alt="Air Filter">
+                        <div class="article-content">
+                            <h3>Air Filter</h3>
+                            <p>Efficient air filters that ensure clean air intake for optimal engine performance.</p>
+                            <button class="contact-btn" data-article="Air Filter" data-image="img/cat1.jpg">Contact Us</button>
+                        </div>
+                    </div>
+                    <div class="article-item" data-category="brakes">
+                        <img src="img/cat1.jpg" alt="Brake Disc">
+                        <div class="article-content">
+                            <h3>Brake Disc</h3>
+                            <p>High-quality brake discs for improved stopping power and safety. Suitable for various vehicles.</p>
+                            <button class="contact-btn" data-article="Brake Disc" data-image="img/cat1.jpg">Contact Us</button>
+                        </div>
+                    </div>
+                    <div class="article-item" data-category="suspension">
+                        <img src="img/cat1.jpg" alt="Shock Absorber">
+                        <div class="article-content">
+                            <h3>Shock Absorber</h3>
+                            <p>Durable shock absorbers for enhanced driving comfort and stability on all road conditions.</p>
+                            <button class="contact-btn" data-article="Shock Absorber" data-image="img/cat1.jpg">Contact Us</button>
+                        </div>
+                    </div>
+                    <div class="article-item" data-category="electrical">
+                        <img src="img/cat1.jpg" alt="Car Fuse">
+                        <div class="article-content">
+                            <h3>Car Fuse</h3>
+                            <p>Reliable car fuses to protect your vehicle's electrical system from overloads and short circuits.</p>
+                            <button class="contact-btn" data-article="Car Fuse" data-image="img/cat1.jpg">Contact Us</button>
+                        </div>
+                    </div>
+                    <div class="article-item" data-category="engine">
+                        <img src="img/cat1.jpg" alt="Fuel Pump">
+                        <div class="article-content">
+                            <h3>Fuel Pump</h3>
+                            <p>Efficient fuel pumps for reliable fuel delivery and engine performance.</p>
+                            <button class="contact-btn" data-article="Fuel Pump" data-image="img/cat1.jpg">Contact Us</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pagination">
+            <div class="container">
+                <button class="pagination-btn prev" aria-label="Previous">&#10094;</button>
+                <span class="page-info">Page <span class="current-page">1</span> of <span class="total-pages">3</span></span>
+                <button class="pagination-btn next" aria-label="Next">&#10095;</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col footer-col-1">
+                <div class="footer-logo-section">
+                    <img src="img/logo.png" alt="Logo" class="footer-logo">
+                    <div class="footer-description">Votre expert en pièces détachées automobiles. </div>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-col footer-col-2">
+                <h3>Coordonnées</h3>
+                <ul>
+                    <li>Adresse : 123 Rue Exemple</li>
+                    <li>Téléphone : (123) 456-7890</li>
+                    <li>Email : contact@example.com</li>
+                </ul>
+            </div>
+            <div class="footer-col footer-col-3">
+                <h3>Liens Rapides</h3>
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">À propos</a></li>
+                    <li><a href="#">Nos Articles</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col footer-col-4">
+                <h3>Newsletter</h3>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Votre email">
+                    <button>Inscription</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Costan website | Design par <a href="#">Yvanie Noelle</a></p>
+        </div>
+    </footer>
+    <button id="scroll-top"><i class="fas fa-chevron-up"></i></button>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>>
+    <script src="script.js" defer></script>
+</body>
+
+</html>

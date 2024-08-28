@@ -186,3 +186,87 @@ document.addEventListener('DOMContentLoaded', function() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 });
+
+ // about page
+ document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.testimonial-slide');
+    const slideCount = slides.length;
+    const slidesToShow = 3; // Number of slides to show at once
+    let index = 0;
+
+    function showSlide() {
+        const offset = -index * (100 / slidesToShow);
+        slides.forEach(slide => {
+            slide.style.transform = `translateX(${offset}%)`;
+        });
+    }
+
+    function nextSlide() {
+        index = (index + 1) % (slideCount - slidesToShow + 1);
+        showSlide();
+    }
+
+    setInterval(nextSlide, 5000); // Change slide every 5 seconds
+    showSlide(); // Initialize display
+});
+
+//article page
+document.addEventListener('DOMContentLoaded', () => {
+    const itemsPerPage = 8;
+    let currentPage = 1;
+    let currentCategory = 'all';
+
+    const renderArticles = (category = 'all', page = 1) => {
+        const articles = document.querySelectorAll('.article-item');
+        articles.forEach(article => {
+            article.style.display = (category === 'all' || article.getAttribute('data-category') === category) ? 'block' : 'none';
+        });
+
+        const filteredArticles = [...articles].filter(article => category === 'all' || article.getAttribute('data-category') === category);
+        const paginatedArticles = filteredArticles.slice((page - 1) * itemsPerPage, page * itemsPerPage);
+
+        articles.forEach(article => article.style.display = 'none'); // Hide all articles
+        paginatedArticles.forEach(article => article.style.display = 'block'); // Show only paginated articles
+
+        document.querySelector('.current-page').textContent = page;
+        document.querySelector('.total-pages').textContent = Math.ceil(filteredArticles.length / itemsPerPage);
+    };
+
+    document.querySelectorAll('.filter-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            currentCategory = button.getAttribute('data-category');
+            currentPage = 1;
+            renderArticles(currentCategory, currentPage);
+        });
+    });
+
+    document.querySelector('.pagination-btn.next').addEventListener('click', () => {
+        if (currentPage < document.querySelector('.total-pages').textContent) {
+            currentPage++;
+            renderArticles(currentCategory, currentPage);
+        }
+    });
+
+    document.querySelector('.pagination-btn.prev').addEventListener('click', () => {
+        if (currentPage > 1) {
+            currentPage--;
+            renderArticles(currentCategory, currentPage);
+        }
+    });
+
+    // Add event listener for contact buttons
+    document.querySelectorAll('.contact-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const articleName = button.getAttribute('data-article');
+            const imageUrl = button.getAttribute('data-image');
+            const message = `Hello, I am interested in the article "${articleName}". Please provide more details. Image: ${imageUrl}`;
+            const phoneNumber = '+237694526505'; // Replace with your WhatsApp number
+            const whatsappUrl = `https://wa.me/${+237694526505}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        });
+    });
+
+    // Initial render
+    renderArticles();
+});
+ 
