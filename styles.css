@@ -1603,35 +1603,7 @@ main {
 }
 
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .company-info-content {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .company-images {
-        max-width: 100%; /* Allow images to take full width on small screens */
-        justify-content: center;
-        position: static; /* Remove absolute positioning on smaller screens */
-    }
-
-    .large-image {
-        width: 100%; /* Adjust for small screens */
-        max-height: 300px; /* Adjust max height for small screens */
-    }
-
-    .small-image {
-        width: 100px; /* Adjust size for small screens */
-        max-height: 100px;
-        position: static; /* Remove absolute positioning */
-        margin-top: 1rem; /* Add margin if necessary */
-    }
-    .timeline-list {
-        flex-direction: column;
-    }
-    
-}
 
 /* article page */
 header {
@@ -1815,7 +1787,45 @@ header {
         padding-bottom: 3rem; /* Reduced padding */
     }
 }
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        background: #fff;
+        padding: 5px 10px;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adding box shadow */
+        position: sticky;
+        top: 0;
+        z-index: 10000000;
+    }
+    .company-info-content {
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .company-images {
+        max-width: 100%; /* Allow images to take full width on small screens */
+        justify-content: center;
+        position: static; /* Remove absolute positioning on smaller screens */
+    }
+
+    .large-image {
+        width: 100%; /* Adjust for small screens */
+        max-height: 300px; /* Adjust max height for small screens */
+    }
+
+    .small-image {
+        width: 100px; /* Adjust size for small screens */
+        max-height: 100px;
+        position: static; /* Remove absolute positioning */
+        margin-top: 1rem; /* Add margin if necessary */
+    }
+    .timeline-list {
+        flex-direction: column;
+    }
+    
+}
 @media (max-width: 600px) {
     .article-item {
         max-width: calc(100% - 1rem); /* Adjust to fit 1 item per row */
