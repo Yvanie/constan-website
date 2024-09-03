@@ -168,6 +168,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setInterval(showNext, 5000);
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    // Function to activate the selected tab and content
+    function activateTab(selectedTab) {
+        // Remove 'active' class from all tab buttons and tab contents
+        tabButtons.forEach(button => button.classList.remove('active'));
+        tabContents.forEach(content => content.classList.remove('active'));
+
+        // Add 'active' class to the selected tab button and its corresponding content
+        const targetContent = document.getElementById(selectedTab);
+        const selectedButton = document.querySelector(`.tab-button[data-tab="${selectedTab}"]`);
+        
+        if (selectedButton && targetContent) {
+            selectedButton.classList.add('active');
+            targetContent.classList.add('active');
+        }
+    }
+
+    // Add click event listeners to each tab button
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const tabId = button.getAttribute('data-tab');
+            activateTab(tabId);
+        });
+    });
+
+    // Activate the default tab on page load (Recent Products)
+    activateTab('recent');
+});
 document.addEventListener('DOMContentLoaded', function() {
     const scrollTopButton = document.getElementById('scroll-top');
 
